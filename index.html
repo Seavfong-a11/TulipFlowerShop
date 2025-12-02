@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complet responsive flower website design tutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Popup / Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .modal-content {
+        background: white;
+        padding: 25px;
+        width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .close-btn {
+        background: #ff4d4d;
+        padding: 8px 15px;
+        border: none;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+
+    <header>
+
+        <input type="checkbox" id="toggle">
+        <label for="toggle" class="fas fa-bars"></label>
+
+        <a href="#" class="logo">flower<span></span></a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#product">product</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-heart" id="heart-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="user-btn"></div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>fresh flowers</h3>
+            <span>natural & beautiful flowers</span>
+            <p>Our store offers in-store packaging and online orders.
+                Reasonable prices you can trust.</p>
+            <a href="#" class="btn">shop now</a>
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <h1 class="heading"> <span> about </span> us </h1>
+        <div class="row">
+            <div class="video-container">
+                <video src="vdo4.mp4" loop autoplay muted></video>
+                <h3>best flower sellers</h3>
+            </div>
+            <div class="content">
+                <h3>why choose us?</h3>
+                <p>Choose our flower shop because we provide fresh, beautiful flowers every day.
+                    We carefully select each flower to make sure it is in perfect condition before arranging it.
+                    Our shop offers affordable prices, creative designs, and friendly customer service.
+                    Whether you need flowers for a special occasion or just to brighten someone’s day,
+                    we are always ready to help you with care and love.
+                </p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="icons-container">
+        <div class="icons">
+            <img src="image1.png" alt="">
+            <div class="info">
+                <h3> free delivery </h3>
+                <span>on all orders</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="image2.png" alt="">
+            <div class="info">
+                <h3> 10day returns </h3>
+                <span>moneyback garantee</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="image3.png" alt="">
+            <div class="info">
+                <h3> offer & gifts </h3>
+                <span>on all orders</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="image4.png" alt="">
+            <div class="info">
+                <h3> secur payments </h3>
+                <span>on all orders</span>
+            </div>
+        </div>
+    </section>
+    <section class="product" id="product">
+        <h1 class="heading">latest<span>product</span></h1>
+        <div class="box-container">
+
+            <!-- start_card -->
+
+            <!-- card1 -->
+            <div class="card box" onclick="openModal('modal1')">
+                <span class="discount">-1000%</span>
+                <div class="imag">
+                    <img src="imageP1.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+
+            <!-- card2 -->
+            <div class="card box" onclick="openModal('modal2')">
+                <span class="discount">-15%</span>
+                <div class="imag">
+                    <img src="imageP2.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+
+            </div>
+
+            <!-- card3 -->
+            <div class="card box" onclick="openModal('modal3')">
+                <span class="discount">-14%</span>
+                <div class="imag">
+                    <img src="imageP8.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+            <!-- card4 -->
+            <div class="card box" onclick="openModal('modal4')">
+                <span class="discount">-15%</span>
+                <div class="imag">
+                    <img src="imageP1.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+            <!-- card5-->
+            <div class="card box" onclick="openModal('modal5')">
+                <span class="discount">-18%</span>
+                <div class="imag">
+                    <img src="imageP5.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+            <!-- card6-->
+            <div class="card box" onclick="openModal('modal6')">
+                <span class="discount">-20%</span>
+                <div class="imag">
+                    <img src="image copy.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+            <!-- card7 -->
+            <div class="card box" onclick="openModal('modal7')">
+                <span class="discount">-25%</span>
+                <div class="imag">
+                    <img src="imageP5.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+            <!-- card8 -->
+            <div class="card box" onclick="openModal('modal8')">
+                <span class="discount">-35%</span>
+                <div class="imag">
+                    <img src="image copy3.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+            <!-- card9-->
+            <div class="card box" onclick="openModal('modal9')">
+                <span class="discount">-30%</span>
+                <div class="imag">
+                    <img src="imageP2.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+            <!-- card10 -->
+            <div class="card box" onclick="openModal('modal10')">
+                <span class="discount">-22%</span>
+                <div class="imag">
+                    <img src="image.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+            <!-- card11 -->
+            <div class="card box" onclick="openModal('modal11')">
+                <span class="discount">-19%</span>
+                <div class="imag">
+                    <img src="image copy3.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+            <!-- card12 -->
+            <div class="card box" onclick="openModal('modal12')">
+                <span class="discount">-13%</span>
+                <div class="imag">
+                    <img src="imageP6.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="card-btn">add to card</a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3> flower pot</h3>
+                    <div class="prices"> 12$.99<span>15.99$</span></div>
+                </div>
+            </div>
+
+            <!-- end_card -->
+
+
+
+            <!-- start_modal  -->
+
+            <!-- MODAL 1 -->
+            <div id="modal1" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="imageP1.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal1')">Close</button>
+                </div>
+            </div>
+
+
+            <!-- MODAL 2 -->
+            <div id="modal2" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="imageP2.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal2')">Close</button>
+                </div>
+            </div>
+            <!-- modal 3-->
+            <div id="modal3" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="imageP8.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal3')">Close</button>
+                </div>
+            </div>
+            <!-- modal 4-->
+            <div id="modal4" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="imageP1.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal4')">Close</button>
+                </div>
+            </div>
+            <!-- modal 5-->
+            <div id="modal5" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="imageP5.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal5')">Close</button>
+                </div>
+            </div>
+            <!-- modal 6-->
+            <div id="modal6" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="image copy.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal6')">Close</button>
+                </div>
+            </div>
+            <!-- modal 7-->
+            <div id="modal7" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="imageP5.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal7')">Close</button>
+                </div>
+            </div>
+            <!-- modal 8-->
+            <div id="modal8" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="image copy3.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal8')">Close</button>
+                </div>
+            </div>
+            <!-- modal 9-->
+            <div id="modal9" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="imageP2.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal9')">Close</button>
+                </div>
+            </div>
+            <!-- modal 10-->
+            <div id="modal10" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="image.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal10')">Close</button>
+                </div>
+            </div>
+            <!-- modal 11-->
+            <div id="modal11" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="image copy3.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal11')">Close</button>
+                </div>
+            </div>
+            <!-- modal 12-->
+            <div id="modal12" class="modal">
+                <div class="modal-content" style="width: 380px; text-align: center;">
+
+                    <img src="imageP6.png" alt="Flower Pot"
+                        style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
+
+                    <h2 style="margin-bottom: 10px;">Flower Pot</h2>
+
+                    <p style="font-size: 15px; color: #555;">
+                        This flower pot is made with premium materials.
+                        Fresh, beautiful, and perfect for decorating your home
+                        or gifting your loved ones.
+                    </p>
+
+                    <h3 style="margin: 10px 0;">
+                        <span style="color:#e4007c; font-weight: bold;">$12.99</span>
+                        <span style="text-decoration: line-through; color: gray;">$15.99</span>
+                    </h3>
+
+                    <button
+                        style=" background:#ff3f6c; padding:10px 20px; border:none; color:white; border-radius:8px; cursor:pointer; margin-top:10px; ">
+                        Add to Cart
+                    </button>
+
+                    <button class="close-btn" onclick="closeModal('modal12')">Close</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+    <section class="review" id="review">
+
+        <h1 class="heading">Customer's <span>Review</span></h1>
+
+        <div class="box-container">
+
+            <!-- BOX 1 -->
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <p>
+                    Beautiful flowers and nice packaging. The shop has a good variety of options.
+                    I will definitely order from here again, especially for special events.
+                </p>
+
+                <div class="user">
+                    <img src="1.png" alt="">
+                    <div class="user-info">
+                        <h3>Billie Eilish</h3>
+                        <span>Lovely customer</span>
+                    </div>
+                </div>
+
+                <span class="fas fa-quote-right"></span>
+            </div>
+
+            <!-- BOX 2 -->
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <p>
+                    The staff was very friendly and helped me choose the perfect arrangement for my friend’s birthday.
+                    The flowers looked even better in person than in the photos!
+                </p>
+
+                <div class="user">
+                    <img src="2.png" alt="">
+                    <div class="user-info">
+                        <h3>Tiffy lau</h3>
+                        <span>Cutie customer</span>
+                    </div>
+                </div>
+
+                <span class="fas fa-quote-right"></span>
+            </div>
+
+            <!-- BOX 3 -->
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <p>
+                    Great service and lovely flowers. I ordered a surprise for my wife, and she was thrilled.
+                    Only reason I didn’t give 5 stars is the delivery took a little longer than expected.
+                </p>
+
+                <div class="user">
+                    <img src="8.png" alt="">
+                    <div class="user-info">
+                        <h3>Hendry</h3>
+                        <span>Cutie customer</span>
+                    </div>
+                </div>
+
+                <span class="fas fa-quote-right"></span>
+            </div>
+            <!-- BOX 3 -->
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <p>
+                    I absolutely loved the bouquet I ordered! The flowers were fresh, beautifully arranged,
+                    and the delivery was on time. Highly recommend this flower shop for any occasion
+                </p>
+
+                <div class="user">
+                    <img src="4.png" alt="">
+                    <div class="user-info">
+                        <h3>Moon Lau</h3>
+                        <span>friendly customer</span>
+                    </div>
+                </div>
+
+                <span class="fas fa-quote-right"></span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>contact</span> us</h1>
+        <div class="row">
+            <form class="form" action="">
+                <input type="text" placeholder=" name" class="box">
+                <input type="email" placeholder=" email" class="box">
+                <input type="number" placeholder=" number" class="box">
+                <textarea name="" class="box" placeholder="message" class="box" cols="30" rows="10"></textarea>
+
+                <input type="submit" value=" send message" class="btn">
+            </form>
+            <div class="image">
+                <img src="19.png" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <div class="box-container">
+            <div class=" box">
+                <h3> Quick link</h3>
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">product</a>
+                <a href="#">review</a>
+                <a href="#">contact</a>
+            </div>
+            <div class=" box">
+                <h3> extra link</h3>
+                <a href="#">my account</a>
+                <a href="#">my order</a>
+                <a href="#">my favourite</a>
+            </div>
+            <div class=" box">
+                <h3> Location</h3>
+                <a href="#">Cambodia</a>
+                <a href="#">Korea</a>
+                <a href="#">China</a>
+                <a href="#">Japan</a>
+
+            </div>
+            <div class=" box">
+                <h3>contact info</h3>
+                <a href="#">+085-968853499</a>
+                <a href="#">korea@gmail.com</a>
+                <a href="#">fuji, japan- 400023</a>
+                <img src="18.png" alt="">
+
+            </div>
+        </div>
+        <div class="credit">
+            created by <span> ms. web designer </span> | all rights reserved
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+
+
+</body>
+
+</html>
